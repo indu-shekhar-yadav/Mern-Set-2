@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mern Stack Set-2</title>
+    <style>
+        /* Common styles for both modes */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #08a5ee; /* Light mode header background color */
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 2rem;
+        }
+
+        .task-box {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 2rem;
+            box-shadow: 0 0 10px rgba(30, 145, 212, 0.4);
+            width: 16%; /* Set the width of each task box */
+            margin: 0 1rem; /* Add some spacing between the two boxes */
+            height: 50%;
+        }
+
+        .task-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .task-box p {
+            margin: 0; /* Remove margin to improve visibility */
+        }
+
+        .task-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .task-list li {
+            margin-bottom: 1rem;
+        }
+
+        .task-list a {
+            text-decoration: none;
+            color: #028aac;
+        }
+
+        .task-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Dark mode styles */
+        .dark-mode {
+            background-color: #353c3d; /* Dark background color for dark mode */
+            color: #fff;
+        }
+
+        /* Toggle button styles */
+        .toggle-button {
+            cursor: pointer;
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            background-color: #150061; /* Light mode button background color */
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <div class="header">
+        <h1>Tasks List</h1>
+        <h2>Indu Shekhar Yadav</h2>
+        <p>Student ID: 21BRS1642</p>
+        
+        <button class="toggle-button" onclick="toggleMode()">🌙</button>
+    </div>
+    <div class="container">
+        <div class="task-box" id="js-tasks">
+            <h2>JavaScript Tasks</h2>
+            <ul class="task-list">
+                <li><a href="JAVASCRIPT/task1.html">First Task</a></li>
+                <li><a href="JAVASCRIPT/task2.html">Second Task</a></li>
+                <li><a href="JAVASCRIPT/task3.html">Third Task</a></li>
+                <li><a href="JAVASCRIPT/task4.html">Fourth Task</a></li>
+                <li><a href="JAVASCRIPT/task5.html">Fifth Task</a></li>
+                <li><a href="JAVASCRIPT/task6.html">Sixth Task</a></li>
+                <li><a href="JAVASCRIPT/task7.html">Seventh Task</a></li>
+                <li><a href="JAVASCRIPT/task8.html">Eighth Task</a></li>
+            </ul>
+        </div>
+        <div class="task-box" id="bootstrap-tasks">
+            <h2>BootStrap Tasks</h2>
+            <ul class="task-list">
+                <li><a href="BOOTSTRAP/task1.html">First Task</a></li>
+                <li><a href="BOOTSTRAP/task2.html">Second Task</a></li>
+                <li><a href="BOOTSTRAP/task3.html">Third Task</a></li>
+                <li><a href="BOOTSTRAP/task4.html">Fourth Task</a></li>
+                <li><a href="BOOTSTRAP/task5.html">Fifth Task</a></li>
+                <li><a href="BOOTSTRAP/task6.html">Sixth Task</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function toggleMode() {
+            const body = document.body;
+            body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
